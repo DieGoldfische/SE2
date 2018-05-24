@@ -60,7 +60,17 @@ public class Vormerkkarte
 	public void addVormerker(Kunde kunde)
 	{
 		assert _vormerker.size()<3 : "Keine weiteren Vormerker möglich!";
-		if(_vormerker.size()<3)
+		boolean kundeIstBereitsVormerker = false;
+		for (Kunde k: getAlleVormerker())
+		{
+			if (k.equals(kunde))
+			{
+				kundeIstBereitsVormerker = true;
+			}
+		}
+			
+		
+		if(!kundeIstBereitsVormerker && _vormerker.size()<3)
 		{
 			_vormerker.add(kunde);
 		}
