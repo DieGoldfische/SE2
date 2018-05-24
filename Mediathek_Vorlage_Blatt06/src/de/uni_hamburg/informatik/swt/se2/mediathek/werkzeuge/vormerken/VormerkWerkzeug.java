@@ -216,13 +216,21 @@ public class VormerkWerkzeug
         
         for(Medium _medium : medien)
         {
-            if( _verleihService.getVormerkkarteFuer(_medium).getAlleVormerker().contains(kunde) 
-                    || _verleihService.getVormerkkarteFuer(_medium).getAlleVormerker().size() > 2  )
+            try
             {
-                vormerkenMoeglich = false ;
-                break;                
+                if( _verleihService.getVormerkkarteFuer(_medium).getAlleVormerker().contains(kunde) 
+                    || _verleihService.getVormerkkarteFuer(_medium).getAlleVormerker().size() > 2  )
+                {
+                    vormerkenMoeglich = false ;
+                    break;                
+                }
+            }
+            catch(NullPointerException e)
+            {
+                //DO NOTHING
             }
         }
+        
 
         return vormerkenMoeglich;
     }
