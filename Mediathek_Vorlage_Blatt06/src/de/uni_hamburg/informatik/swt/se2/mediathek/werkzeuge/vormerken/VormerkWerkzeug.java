@@ -218,6 +218,11 @@ public class VormerkWerkzeug
         {
             try
             {
+                if(_verleihService.getEntleiherFuer(_medium).equals(kunde))
+                {
+                    vormerkenMoeglich = false;
+                    break;
+                }
                 if( _verleihService.getVormerkkarteFuer(_medium).getAlleVormerker().contains(kunde) 
                     || _verleihService.getVormerkkarteFuer(_medium).getAlleVormerker().size() > 2  )
                 {
@@ -247,6 +252,8 @@ public class VormerkWerkzeug
             .getSelectedMedien();
         Kunde selectedKunde = _kundenAuflisterWerkzeug.getSelectedKunde();
         // TODO für Aufgabenblatt 6 (nicht löschen): Vormerken einbauen
+        
+        _verleihService.merkeVorFuer(selectedMedien, selectedKunde);
 
     }
 

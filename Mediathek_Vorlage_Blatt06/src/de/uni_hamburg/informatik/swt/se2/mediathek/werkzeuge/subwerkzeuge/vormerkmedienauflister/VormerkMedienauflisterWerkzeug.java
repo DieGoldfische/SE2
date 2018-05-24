@@ -88,6 +88,25 @@ public class VormerkMedienauflisterWerkzeug extends ObservableSubWerkzeug
             Kunde vormerker1 = null;
             Kunde vormerker2 = null;
             Kunde vormerker3 = null;
+            
+            if(_verleihService.istVerliehen(medium))
+            {
+                entleiher = _verleihService.getEntleiherFuer(medium);
+            }
+            
+            if(_verleihService.existiertVormerkkarte(medium))
+            {
+                try
+                {
+                vormerker1 = _verleihService.getVormerkkarteFuer(medium).gibVormerker(0);
+                vormerker2 = _verleihService.getVormerkkarteFuer(medium).gibVormerker(1);
+                vormerker3 = _verleihService.getVormerkkarteFuer(medium).gibVormerker(2);
+                }
+                catch(NullPointerException e)
+                {
+                    // DO NOTHING // Dashier tritt auf sobald keine weitern Vormerker da sind !
+                }
+            }
 
             medienFormatierer.add(new VormerkMedienFormatierer(medium,
                     entleiher, vormerker1, vormerker2, vormerker3));

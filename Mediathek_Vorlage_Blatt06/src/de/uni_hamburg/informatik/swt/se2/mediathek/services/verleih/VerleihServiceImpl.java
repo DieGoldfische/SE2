@@ -74,6 +74,8 @@ public class VerleihServiceImpl extends AbstractObservableService
         _kundenstamm = kundenstamm;
         _medienbestand = medienbestand;
         _protokollierer = new VerleihProtokollierer();
+        
+       _vormerkkarten = new HashMap<Medium, Vormerkkarte>();
     }
 
     /**
@@ -314,8 +316,18 @@ public class VerleihServiceImpl extends AbstractObservableService
     @Override
     public boolean existiertVormerkkarte(Medium medium)
     {
+        boolean ergebnis = false;
         
-        return _vormerkkarten.containsKey(medium);
+        try
+        {
+            ergebnis = _vormerkkarten.containsKey(medium);
+        }
+        catch(NullPointerException e)
+        {
+            //Do Nothing
+        }
+        
+        return ergebnis;
     }
 
     @Override
@@ -354,16 +366,17 @@ public class VerleihServiceImpl extends AbstractObservableService
     {
         for(Medium medium : medien )
         {
-            if(getVormerkkarteFuer(medium).equals(null) )
-            {
-                _vormerkkarten.put(medium, new Vormerkkarte(kunde, medium)) ; 
-            }
-            else
+
+            try
             {
                 getVormerkkarteFuer(medium).addVormerker(kunde);
             }
+            catch(NullPointerException e)
+            {
+                _vormerkkarten.put(medium, new Vormerkkarte(kunde, medium)) ; 
+            }
         }
-        
+       
     }
 
 }

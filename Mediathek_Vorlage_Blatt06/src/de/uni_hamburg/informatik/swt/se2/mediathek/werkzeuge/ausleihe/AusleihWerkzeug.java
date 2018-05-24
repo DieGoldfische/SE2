@@ -217,6 +217,25 @@ public class AusleihWerkzeug
         // Anforderung d).
         boolean ausleiheMoeglich = (kunde != null) && !medien.isEmpty()
                 && _verleihService.sindAlleNichtVerliehen(medien);
+        
+     
+        for(Medium _medium : medien) 
+        {
+            if(ausleiheMoeglich)
+            {
+                try
+                {
+                ausleiheMoeglich = (_verleihService.istVorgemerktVon(_medium, kunde) ||
+                        _verleihService.getVormerkkarteFuer(_medium).gibVormerkerAnzahl()== 0 );
+                }
+                catch(NullPointerException e)
+                {
+                    //Do Nothing
+                }
+            }
+                
+        }
+            
 
         return ausleiheMoeglich;
     }

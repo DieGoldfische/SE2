@@ -88,6 +88,18 @@ public class Vormerkkarte
 	    return _vormerker;
 	}
 	
+	/**Methode für ausgabe von Vormerkern an bestimmter poistion
+	 * 
+	 * @param position
+	 * 
+	 * @return Kunde Der Vormerker and der Position position
+	 */
+	public Kunde gibVormerker(int position)
+	{
+	    
+	    return _vormerker.get(position);
+	}
+	
 	
 	
 }

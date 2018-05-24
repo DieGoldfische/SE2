@@ -11,3 +11,244 @@ am 15.5.2018 verliehen an
     Anschrift:
     Müllerweg 1
     22760 Hamburg
+Thu May 24 16:15:38 CEST 2018: Ausleihe
+CD:
+    Titel: Breakaway
+    Kommentar: Nachfolger vom Album Tankful
+    Interpret: Kelly Clarkson
+    Spiellänge: 87
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:36 CEST 2018: Ausleihe
+CD:
+    Titel: Disturbia
+    Kommentar: gut
+    Interpret: Rihanna
+    Spiellänge: 90
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:40 CEST 2018: Ausleihe
+CD:
+    Titel: Garden State
+    Kommentar: Soundtrack
+    Interpret: Various
+    Spiellänge: 56
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:40 CEST 2018: Ausleihe
+CD:
+    Titel: One of the Boys
+    Kommentar: Das ist das neue Album von Katy Perry One of the Boys inklusive der Hitsingles Hot N Cold und I Kissed A Girl.
+    Interpret: Katy Perry
+    Spiellänge: 70
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:40 CEST 2018: Ausleihe
+CD:
+    Titel: Wincing the Night Away
+    Kommentar: Die fleißigsten Slacker der Indie-Szene 
+    Interpret: the Shins
+    Spiellänge: 69
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:40 CEST 2018: Ausleihe
+DVD:
+    Titel: Hellboy
+    Kommentar: Red - der dämonische Held aus der Unterwelt
+    Regisseur: Guillermo Del Toro
+    Laufzeit: 110
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:40 CEST 2018: Ausleihe
+DVD:
+    Titel: James Bond - Ein Quantum Trost
+    Kommentar: Ein Quantum Trost setzt da an, wo Casino Royale endet
+    Regisseur: Marc Forster
+    Laufzeit: 110
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:40 CEST 2018: Ausleihe
+DVD:
+    Titel: James Bond - Ein Quantum Trost
+    Kommentar: Ein Quantum Trost setzt da an, wo Casino Royale endet
+    Regisseur: Marc Forster
+    Laufzeit: 110
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:40 CEST 2018: Ausleihe
+DVD:
+    Titel: Kung Fu Panda
+    Kommentar: Die Legende von einem Drachenkrieger
+    Regisseur: John Stevenson
+    Laufzeit: 115
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:43 CEST 2018: Ausleihe
+DVD:
+    Titel: Pirates of the Caribbean - Am Ende der Welt
+    Kommentar: Abenteuer des Cpt. Jack Sparrow
+    Regisseur: Gore Verbinski
+    Laufzeit: 160
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:43 CEST 2018: Ausleihe
+DVD:
+    Titel: Pirates of the Caribbean - Am Ende der Welt
+    Kommentar: Abenteuer des Cpt. Jack Sparrow
+    Regisseur: Gore Verbinski
+    Laufzeit: 160
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:43 CEST 2018: Ausleihe
+DVD:
+    Titel: The Dark Knight
+    Kommentar: Die Fortsetzung von Batman Begins
+    Regisseur: Christopher Nolan
+    Laufzeit: 130
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:43 CEST 2018: Ausleihe
+KonsolenVideospiel:
+    Titel: FIFA 09
+    Kommentar: Geh in FIFA 09 auf den Platz und spiel professionellen Fußball, so wie du ihn dir vorstellst.
+    System: Playstation 3
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:43 CEST 2018: Ausleihe
+KonsolenVideospiel:
+    Titel: Mario Kart
+    Kommentar:  Neue Strecken, neue Rennfahrer, neue Fahrzeuge und 12-Spieler-Rennen
+    System:  Wii
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:46 CEST 2018: Ausleihe
+PCVideospiel:
+    Titel: Battlefield 2
+    Kommentar: Laden und entsichern, Soldat!
+    System: Windows Vista/XP
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:46 CEST 2018: Ausleihe
+PCVideospiel:
+    Titel: Company of Heroes
+    Kommentar: Tales of Valor
+    System: Windows Vista/XP
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:46 CEST 2018: Ausleihe
+PCVideospiel:
+    Titel: Grand Theft Auto IV
+    Kommentar: Uncut
+    System: Windows Vista/XP
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 16:16:46 CEST 2018: Ausleihe
+PCVideospiel:
+    Titel: World of Warcraft
+    Kommentar: Der Aufstieg des Lichkönigs
+    System:  Mac OS X
+am 24.5.2018 verliehen an
+    Kundennummer: 123465
+    Name: John. J. Ava
+    Telefon: unbekannt
+    Anschrift:
+    Wurtstrasse 23
+    58507 Köln
+Thu May 24 17:17:20 CEST 2018: Ausleihe
+CD:
+    Titel: Disturbia
+    Kommentar: gut
+    Interpret: Rihanna
+    Spiellänge: 90
+am 24.5.2018 verliehen an
+    Kundennummer: 123460
+    Name: Katarina Klum
+    Telefon: unbekannt
+    Anschrift:
+    Ottensener Strasse 10
+    22761 Hamburg
