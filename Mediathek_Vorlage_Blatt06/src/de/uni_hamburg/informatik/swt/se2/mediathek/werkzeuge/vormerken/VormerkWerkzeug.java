@@ -214,17 +214,17 @@ public class VormerkWerkzeug
         // der Anforderungen a), b), c) und e) aktiviert.
         boolean vormerkenMoeglich = (kunde != null) && !medien.isEmpty();
         
-        for(Medium _medium : medien)
+        for(Medium medium : medien)
         {
             try
             {
-                if(_verleihService.getEntleiherFuer(_medium).equals(kunde))
+                if(_verleihService.istVerliehen(medium)&& _verleihService.getEntleiherFuer(medium).equals(kunde))
                 {
                     vormerkenMoeglich = false;
                     break;
                 }
-                if( _verleihService.getVormerkkarteFuer(_medium).getAlleVormerker().contains(kunde) 
-                    || _verleihService.getVormerkkarteFuer(_medium).getAlleVormerker().size() > 2  )
+                if( _verleihService.getVormerkkarteFuer(medium).getAlleVormerker().contains(kunde) 
+                    || _verleihService.getVormerkkarteFuer(medium).getAlleVormerker().size() > 2  )
                 {
                     vormerkenMoeglich = false ;
                     break;                
