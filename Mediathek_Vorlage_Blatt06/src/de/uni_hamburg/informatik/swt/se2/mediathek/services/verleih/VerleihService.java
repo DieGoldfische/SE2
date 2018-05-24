@@ -5,6 +5,7 @@ import java.util.List;
 import de.uni_hamburg.informatik.swt.se2.mediathek.fachwerte.Datum;
 import de.uni_hamburg.informatik.swt.se2.mediathek.materialien.Kunde;
 import de.uni_hamburg.informatik.swt.se2.mediathek.materialien.Verleihkarte;
+import de.uni_hamburg.informatik.swt.se2.mediathek.materialien.Vormerkkarte;
 import de.uni_hamburg.informatik.swt.se2.mediathek.materialien.medien.Medium;
 import de.uni_hamburg.informatik.swt.se2.mediathek.services.ObservableService;
 
@@ -227,5 +228,59 @@ public interface VerleihService extends ObservableService
      * @ensure (result != null)
      */
     Verleihkarte getVerleihkarteFuer(Medium medium);
+    
+    
+    /**
+     * Gibt die Vormerkkarte für das angegebene Medium zurück
+     * 
+     * @param medium Ein Medium
+     * 
+     * @returnVormerkkarte Die Vormerkkarte für das Medium
+     */
+    Vormerkkarte getVormerkkarteFuer(Medium medium);
+    
+    /**
+     * Existiert eine Vormerkkarte für angegebenes Medium
+     * 
+     * @param medium
+     * 
+     * @return boolean Existiert eine Vormerkkarte für angegebenes Medium 
+     */
+    boolean existiertVormerkkarte(Medium medium);
+    
+    /**
+     * Ist vormerken möglich
+     * 
+     * @param kunde
+     * @param medien
+     * 
+     * @return boolean Ist vormerken möglich
+     */
+    boolean istVormerkenMoeglich(Kunde kunde, List<Medium> medien);
+    
+    /**
+     * Methode zum entfernen einer Vormerkung
+     * 
+     * @param medium
+     * @param kunde
+     */
+    void entferneVormerkung(Medium medium, Kunde kunde);
 
+    /**
+     * Ist Medium vorgemerkt von Kunde
+     * 
+     * @param medium
+     * @param kunde
+     * 
+     * @return boolean Ist Medium vorgemerkt von Kunde
+     */
+    boolean istVorgemerktVon(Medium medium, Kunde kunde);
+    
+    /**
+     * Methode zum Vormerken
+     * 
+     * @param medien
+     * @param kunde
+     */
+    void merkeVorFuer(List<Medium> medien, Kunde kunde);
 }

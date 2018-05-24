@@ -10,6 +10,11 @@ public class Vormerkkarte
 	private Medium _medium;
 	private List<Kunde> _vormerker;
 	
+	/**KONSTRUKTOR
+	 * 
+	 * @param kunde
+	 * @param medium
+	 */
 	public Vormerkkarte(Kunde kunde, Medium medium)
 	{
 		 assert kunde != null : "Vorbedingung verletzt: entleiher != null";
@@ -19,21 +24,34 @@ public class Vormerkkarte
 	     _vormerker.add(kunde);
 	}
 	
+	/**Methode für nächsten Vormerker (position 0)
+	 * 
+	 * @return Kunde Vormerker auf position 0
+	 */
 	public Kunde gibNaechsterVormerker()
     {
         return _vormerker.get(0);
     }
+	
+	/**Methode für Medium der Vormerkkarte
+	 * 
+	 * @return Medium Das Medium der Vormerkkarte
+	 */
 	public Medium gibMedium()
 	{
 		return _medium;
 	}
 	
+	/**Methode für Anzahl der Vormerker
+	 * 
+	 * @return Integer Anzahl der Vormerker.
+	 */
 	public int gibVormerkerAnzahl()
 	{
 		return _vormerker.size();
 	}
 	
-	/**
+	/**Methode zum Hinzufügen eines weitern Vormerkers
 	 * 
 	 * @param kunde der Kunde
 	 * @require _vormerker.size < 3
@@ -48,4 +66,28 @@ public class Vormerkkarte
 		}
 			
 	}
+	
+	/**Methode zum entfernen eines Vormerkers
+	 * 
+	 * @param kunde Vormerker der Entfernt werden soll
+	 */
+	public void entferneVormerker(Kunde kunde)
+	{
+	    assert kunde != null;
+	    
+	    _vormerker.remove(kunde);
+	    
+	}
+	
+	/**Methode für alle Vormerker in einer List
+	 * 
+	 * @return List<Kunde> Eine Liste aller Vormerker
+	 */
+	public List<Kunde> getAlleVormerker()
+	{
+	    return _vormerker;
+	}
+	
+	
+	
 }

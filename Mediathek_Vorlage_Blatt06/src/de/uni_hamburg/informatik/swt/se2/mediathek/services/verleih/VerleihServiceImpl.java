@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import de.uni_hamburg.informatik.swt.se2.mediathek.fachwerte.Datum;
 import de.uni_hamburg.informatik.swt.se2.mediathek.materialien.Kunde;
 import de.uni_hamburg.informatik.swt.se2.mediathek.materialien.Verleihkarte;
+import de.uni_hamburg.informatik.swt.se2.mediathek.materialien.Vormerkkarte;
 import de.uni_hamburg.informatik.swt.se2.mediathek.materialien.medien.Medium;
 import de.uni_hamburg.informatik.swt.se2.mediathek.services.AbstractObservableService;
 import de.uni_hamburg.informatik.swt.se2.mediathek.services.kundenstamm.KundenstammService;
@@ -29,6 +31,11 @@ public class VerleihServiceImpl extends AbstractObservableService
      * die Angabe des Mediums möglich. Beispiel: _verleihkarten.get(medium)
      */
     private Map<Medium, Verleihkarte> _verleihkarten;
+    
+    /**
+     * Dieses Set speichert jede Vormerkkarte
+     */
+    private Map<Medium, Vormerkkarte> _vormerkkarten;
 
     /**
      * Der Medienbestand.
@@ -295,6 +302,68 @@ public class VerleihServiceImpl extends AbstractObservableService
             }
         }
         return result;
+    }
+
+    @Override
+    public Vormerkkarte getVormerkkarteFuer(Medium medium)
+    {
+
+        return _vormerkkarten.get(medium);
+    }
+
+    @Override
+    public boolean existiertVormerkkarte(Medium medium)
+    {
+        
+        return _vormerkkarten.containsKey(medium);
+    }
+
+    @Override
+    public boolean istVormerkenMoeglich(Kunde kunde, List<Medium> medien)
+    {
+        //TODO TO DAS IST DAS SELBE WIE IN VormerkWerkzeug....kann ich iwie auf die Funktion von da zugreifen bzw brauchen wir die in dem Werkzeug überhaupt ????
+        boolean vormerkenMoeglich = true;
+        
+        for(Medium _medium : medien)
+        {
+            if( getVormerkkarteFuer(_medium).getAlleVormerker().contains(kunde) 
+                    || getVormerkkarteFuer(_medium).getAlleVormerker().size() > 2  )
+            {
+                vormerkenMoeglich = false ;
+                break;                
+            }
+        }
+
+        return vormerkenMoeglich;
+    }
+
+    @Override
+    public void entferneVormerkung(Medium medium, Kunde kunde)
+    {
+        getVormerkkarteFuer(medium).entferneVormerker(kunde);        
+    }
+
+    @Override
+    public boolean istVorgemerktVon(Medium medium, Kunde kunde)
+    {       
+        return getVormerkkarteFuer(medium).getAlleVormerker().contains(kunde) ;
+    }
+
+    @Override
+    public void merkeVorFuer(List<Medium> medien, Kunde kunde)
+    {
+        for(Medium medium : medien )
+        {
+            if(getVormerkkarteFuer(medium).equals(null) )
+            {
+                _vormerkkarten.put(medium, new Vormerkkarte(kunde, medium)) ; 
+            }
+            else
+            {
+                getVormerkkarteFuer(medium).addVormerker(kunde);
+            }
+        }
+        
     }
 
 }

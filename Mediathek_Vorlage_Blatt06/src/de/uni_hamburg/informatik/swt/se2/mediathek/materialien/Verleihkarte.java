@@ -1,5 +1,7 @@
 package de.uni_hamburg.informatik.swt.se2.mediathek.materialien;
 
+import java.awt.Component;
+
 import de.uni_hamburg.informatik.swt.se2.mediathek.fachwerte.Datum;
 import de.uni_hamburg.informatik.swt.se2.mediathek.fachwerte.Geldbetrag;
 import de.uni_hamburg.informatik.swt.se2.mediathek.materialien.medien.Medium;
@@ -166,4 +168,5 @@ public class Verleihkarte
     {
         return getFormatiertenString();
     }
+
 }

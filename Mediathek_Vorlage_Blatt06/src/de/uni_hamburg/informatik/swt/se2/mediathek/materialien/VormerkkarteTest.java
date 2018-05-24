@@ -51,6 +51,18 @@ public class VormerkkarteTest
 		_karte.addVormerker(_kunde2);
 		assertEquals(_karte.gibVormerkerAnzahl(), 2);
 	}
+	
+	
+	@Test
+	public void testeEntferneVormerker()
+	{
+	    _karte.addVormerker(_kunde2);
+	    
+	    _karte.entferneVormerker(_kunde2);
+	    
+	    assertFalse(_karte.getAlleVormerker().contains(_kunde2));
+	}
+
 
 	
 //	@Test
