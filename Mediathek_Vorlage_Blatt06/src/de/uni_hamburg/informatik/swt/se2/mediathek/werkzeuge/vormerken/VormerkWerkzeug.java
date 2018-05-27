@@ -218,6 +218,11 @@ public class VormerkWerkzeug
         {
             try
             {
+                if(!_verleihService.istVerliehen(medium))
+                {
+                    vormerkenMoeglich = false;
+                    break; 
+                }
                 if(_verleihService.istVerliehen(medium)&& _verleihService.getEntleiherFuer(medium).equals(kunde))
                 {
                     vormerkenMoeglich = false;
