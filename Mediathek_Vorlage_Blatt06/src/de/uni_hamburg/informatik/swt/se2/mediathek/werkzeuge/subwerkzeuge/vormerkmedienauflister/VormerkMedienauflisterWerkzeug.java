@@ -102,7 +102,7 @@ public class VormerkMedienauflisterWerkzeug extends ObservableSubWerkzeug
                 vormerker2 = _verleihService.getVormerkkarteFuer(medium).gibVormerker(1);
                 vormerker3 = _verleihService.getVormerkkarteFuer(medium).gibVormerker(2);
                 }
-                catch(NullPointerException e)
+                catch(IndexOutOfBoundsException e)
                 {
                     // DO NOTHING // Dashier tritt auf sobald keine weitern Vormerker da sind !
                 }
