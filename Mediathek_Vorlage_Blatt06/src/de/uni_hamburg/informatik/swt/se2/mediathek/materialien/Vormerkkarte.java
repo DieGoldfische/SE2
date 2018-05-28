@@ -24,6 +24,18 @@ public class Vormerkkarte
 	     _vormerker.add(kunde);
 	}
 	
+	/**KONSTRUKTOR
+     * 
+     * @param kunde
+     * @param medium
+     */
+    public Vormerkkarte( Medium medium)
+    {
+         assert medium != null : "Vorbedingung verletzt: medium != null";
+         _medium = medium;
+         _vormerker = new LinkedList<Kunde>();
+    }
+	
 	/**Methode für nächsten Vormerker (position 0)
 	 * 
 	 * @return Kunde Vormerker auf position 0
