@@ -212,7 +212,7 @@ public class VerleihServiceImplTest
     }
     
     @Test
-    public void testGetVormerkkarteFuerMedium()
+    public void testVormerkenMoeglich()
     {
         _kunde = new Kunde(new Kundennummer(123456), "Peter", "Griffin");
         
