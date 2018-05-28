@@ -149,5 +149,111 @@ public class VerleihServiceImplTest
                 Collections.singletonList(_medienListe.get(2)), _datum);
         assertFalse(ereignisse[0]);
     }
+    
+    @Test
+    public void testVormerken()
+    {
+        _kunde = new Kunde(new Kundennummer(123456), "ich", "du");
+        
+        MedienbestandService medienbestand = new MedienbestandServiceImpl(
+                new ArrayList<Medium>());
+        
+        Medium medium = new CD("CD1", "baz", "foo", 123);
+        medienbestand.fuegeMediumEin(medium);
+        
+        _medienListe = medienbestand.getMedien();
+        
+        _service.merkeVorFuer(_medienListe, _kunde);
+        
+        assertTrue(_service.istVorgemerktVon(medium, _kunde));
+        
+    }
+    
+    @Test
+    public void testVormerkungLoeschen()
+    {
+        _kunde = new Kunde(new Kundennummer(123456), "ich", "du");
+        
+        MedienbestandService medienbestand = new MedienbestandServiceImpl(
+                new ArrayList<Medium>());
+        
+        Medium medium = new CD("CD1", "baz", "foo", 123);
+        medienbestand.fuegeMediumEin(medium);
+        
+        _medienListe = medienbestand.getMedien();
+        
+        _service.merkeVorFuer(_medienListe, _kunde);
+        
+        assertTrue(_service.istVorgemerktVon(medium, _kunde));
+        
+        _service.entferneVormerkung(medium, _kunde);
+        
+        assertFalse(_service.istVorgemerktVon(medium, _kunde));
+   
+    }
+    
+    @Test
+    public void testGetVormerkkarteFuerKunde()
+    {
+        _kunde = new Kunde(new Kundennummer(123456), "ich", "du");
+        
+        MedienbestandService medienbestand = new MedienbestandServiceImpl(
+                new ArrayList<Medium>());
+        
+        Medium medium = new CD("CD1", "baz", "foo", 123);
+        medienbestand.fuegeMediumEin(medium);
+        
+        _medienListe = medienbestand.getMedien();
+        
+        _service.merkeVorFuer(_medienListe, _kunde);
+        
+        assertTrue(_service.getVormerkkarteFuer(medium).gibNaechsterVormerker().equals(_kunde));
+         
+    }
+    
+    @Test
+    public void testGetVormerkkarteFuerMedium()
+    {
+        _kunde = new Kunde(new Kundennummer(123456), "Peter", "Griffin");
+        
+        MedienbestandService medienbestand = new MedienbestandServiceImpl(
+                new ArrayList<Medium>());
+        
+        Medium medium = new CD("MEDIUMNAME", "baz", "foo", 123);
+        medienbestand.fuegeMediumEin(medium);
+        
+        _medienListe = medienbestand.getMedien();
+        
+        
+        assertTrue(_service.istVormerkenMoeglich(_kunde, _medienListe));
+        
+        _service.merkeVorFuer(_medienListe, _kunde);
+        
+        assertFalse(_service.istVormerkenMoeglich(_kunde, _medienListe));
+         
+    }
+    
+    @Test
+    public void testVormerkkarteKonstruktorNurMedium()
+    {
+        _kunde = new Kunde(new Kundennummer(123456), "Günther", "Stahlfuß");
+        
+        MedienbestandService medienbestand = new MedienbestandServiceImpl(
+                new ArrayList<Medium>());
+        
+        Medium medium = new CD("LALaLALA", "baz", "foo", 123);
+        medienbestand.fuegeMediumEin(medium);
+        
+        _medienListe = medienbestand.getMedien();
+        
+        _service.istVormerkenMoeglich(_kunde, _medienListe); // Vormerkkarte existiert nicht somit wird der Kontruktor ohne kunde aufgerufen
+        
+        _service.merkeVorFuer(_medienListe, _kunde);
+        
+        assertFalse(_service.istVormerkenMoeglich(_kunde, _medienListe));
+        
+         
+    }
+    
 
 }
