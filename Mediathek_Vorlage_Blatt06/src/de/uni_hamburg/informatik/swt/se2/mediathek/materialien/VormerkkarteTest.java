@@ -65,20 +65,20 @@ public class VormerkkarteTest
 
 
 	
-//	@Test
-//	public void testEquals()
-//	{
-//		Vormerkkarte karte1 = new Vormerkkarte(_kunde, _medium);
-//
-//		assertTrue(_karte.equals(karte1));
-//		assertEquals(_karte.hashCode(), karte1.hashCode());
-//
-//		Kunde kunde2 = new Kunde(new Kundennummer(654321), "ich", "du");
-//		CD medium2 = new CD("hallo", "welt", "foo", 321);
-//		Vormerkkarte karte2 = new Vormerkkarte(kunde2, medium2);
-//
-//		assertFalse(_karte.equals(karte2));
-//		assertNotSame(_karte.hashCode(), karte2.hashCode());
-//
-//	}
+	@Test
+	public void testEquals()
+	{
+		Vormerkkarte karte1 = new Vormerkkarte(_kunde, _medium);
+
+		assertTrue(_karte.equals(karte1));
+		assertEquals(_karte.hashCode(), karte1.hashCode());
+
+		Kunde kunde2 = new Kunde(new Kundennummer(654321), "ich", "du");
+		CD medium2 = new CD("hallo", "welt", "foo", 321);
+		Vormerkkarte karte2 = new Vormerkkarte(kunde2, medium2);
+
+		assertFalse(_karte.equals(karte2));
+		assertNotSame(_karte.hashCode(), karte2.hashCode());
+
+	}
 }
