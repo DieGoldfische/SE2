@@ -1,5 +1,6 @@
 package de.uni_hamburg.informatik.swt.se2.mediathek.fachwerte;
 
+//lololo
 import java.util.Calendar;
 import java.util.TimeZone;
 
@@ -288,4 +289,4 @@ public final class Datum implements Comparable<Datum>
     }
 }
 
-//DIES IST EIN TEST FÜR GIT
+//DIES IST EIN TEST Fï¿½R GIT
